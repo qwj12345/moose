@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+.cases-container{
+    width: 74%;
+    margin: 5rem auto 5rem;
+}
+.case-item{
+    margin-bottom: 5rem;
+    background: #fff;
+}
+.case-item-img{
+    width: 65%;
+}
+.case-item-right{
+    padding: 5% 5% 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+}
+.case-item-title{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 2.6rem;
+}
+.case-title-eng{
+    color: #aaa;
+    font-size: 1.6rem;
+}
+.case-item-text{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #333;
+    margin-bottom: 5rem;
+}
+.case-item-bottom{
+    display: flex;
+    justify-content: flex-end;
+}
+.case-item-bottom>.left{
+    margin-right: 2rem;
+}
+.case-item-bottom>.left,.case-item-bottom>.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.case-item-bottom>.left>div:first-child{
+    width: 2.8rem;
+    margin-bottom: 0.4rem;
+}
+.case-item-bottom>.right>div:first-child{
+    width: 3.7rem;
+    margin-bottom: 0.4rem;
+}
+.white-block{
+    padding: 3% 13%;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.white-block-item{
+    width: 48%;
+    overflow: hidden;
+    position: relative;
+    height: 28vw;
+    margin-bottom: 5rem;
+}
+.white-block-item:hover .white-item-bottom{
+    transform: translate(0,0);
+}
+.white-item-bottom{
+    padding: 1.4rem 3rem 1rem;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transform: translate(0,49%);
+    z-index: 2;
+    transition: all .5s linear;
+}
+.white-item-bottom>.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.white-item-bottom>.top>.title>div:first-child{
+    font-size: 1.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.white-item-bottom>.top>.title>div:last-child{
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 0.2rem;
+}
+.white-item-bottom>.top>.icons{
+    display: flex;
+    align-items: center;
+}
+.white-item-bottom>.top>.icons>div:first-child{
+    width: 2.7rem;
+    cursor: pointer;
+}
+.white-item-bottom>.top>.icons>div:last-child{
+    width: 3.6rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.white-item-bottom>.bottom{
+    padding: 1.2rem 0rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+@media (max-width: 767px){
+    .cases-container{
+        width: 90%;
+        margin: 3rem auto;
+    }
+    .case-item-img{
+        width: 100%;
+    }
+    .case-item-right{
+        padding: 5% 5% 1.5%;
+        width: 100%;
+    }
+    .case-item-text{
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    .case-item{
+        margin-bottom: 3rem;
+    }
+    .white-block-item{
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        margin-bottom: 11rem;
+    }
+    .white-item-bottom{
+        padding: 1rem 0rem 1rem;
+        transform: translate(0,100%);
+    }
+    .white-item-bottom>.bottom{
+        display: none;
+    }
+    .white-item-bottom>.top{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .white-item-bottom>.top>.icons{
+        margin-top: 1rem;
+        align-self: flex-end;
+    }
+    .white-item-bottom>.top>.icons>div:first-child{
+        width: 2.5rem;
+    }
+    .white-item-bottom>.top>.icons>div:last-child{
+        width: 3.2rem;
+
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')"  class="active">案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- banner -->
+                <div>
+                    <img src="./images/cases_banner1.png"/>
+                </div>
+                <!-- content -->
+                <div class="cases-container">
+                    <a  onclick="delayURL('./caseDetail.html')"  class="case-item flex-block">
+                        <div class="case-item-img"><img src="./images/case_main1.png"/></div>
+                        <div class="case-item-right">
+                            <div>
+                                <div class="case-item-title">极致简约轻奢风</div>
+                                <div class="case-title-eng">SIMPLE AND LUXURIOUS STYLE</div>
+                            </div>
+                            <div>
+                                <div class="case-item-text">Mosee最新设计<br/>舒适挑高别墅，把空间运用到了极致，80%都属于环保材料。</div>
+                                <div class="case-item-bottom">
+                                    <div class="left">
+                                        <div><img src="./images/case_bottom_icon1.png"/></div>
+                                        <div>现场视频</div>
+                                    </div>
+                                    <div class="right">
+                                        <div><img src="./images/case_bottom_icon2.png"/></div>
+                                        <div>360全景</div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a  onclick="delayURL('./caseDetail.html')"  class="case-item flex-block">
+                        <div class="case-item-img"><img src="./images/case_main2.png"/></div>
+                        <div class="case-item-right">
+                            <div>
+                                <div class="case-item-title">极致简约轻奢风</div>
+                                <div class="case-title-eng">SIMPLE AND LUXURIOUS STYLE</div>
+                            </div>
+                            <div>
+                                <div class="case-item-text">Mosee最新设计<br/>舒适挑高别墅，把空间运用到了极致，80%都属于环保材料。</div>
+                                <div class="case-item-bottom">
+                                    <div class="left">
+                                        <div><img src="./images/case_bottom_icon1.png"/></div>
+                                        <div>现场视频</div>
+                                    </div>
+                                    <div class="right">
+                                        <div><img src="./images/case_bottom_icon2.png"/></div>
+                                        <div>360全景</div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 白色 -->
+                <div class="white-block">
+                    <div class="white-block-item">
+                        <div><img src="./images/case_item1.png"/></div>
+                        <div class="white-item-bottom">
+                            <div class="top">   
+                                <div class="title">
+                                    <div>极致简约轻奢风</div>
+                                    <div>SIMPLE AND LUXURIOUS STYLE</div>
+                                </div>
+                                <div class="icons">
+                                    <div><img src="./images/case_bottom_icon1.png"/></div>
+                                    <div><img src="./images/case_bottom_icon2.png"/></div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                根据客户要求融合设计师的想法构建出了符合客户审美，需求的空间设计。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="white-block-item">
+                        <div><img src="./images/case_item2.png"/></div>
+                        
+                        <div class="white-item-bottom">
+                            <div class="top">   
+                                <div class="title">
+                                    <div>极致简约轻奢风</div>
+                                    <div>SIMPLE AND LUXURIOUS STYLE</div>
+                                </div>
+                                <div class="icons">
+                                    <div><img src="./images/case_bottom_icon1.png"/></div>
+                                    <div><img src="./images/case_bottom_icon2.png"/></div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                根据客户要求融合设计师的想法构建出了符合客户审美，需求的空间设计。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="white-block-item">
+                        <div><img src="./images/case_item3.png"/></div>
+                        
+                        <div class="white-item-bottom">
+                            <div class="top">   
+                                <div class="title">
+                                    <div>极致简约轻奢风</div>
+                                    <div>SIMPLE AND LUXURIOUS STYLE</div>
+                                </div>
+                                <div class="icons">
+                                    <div><img src="./images/case_bottom_icon1.png"/></div>
+                                    <div><img src="./images/case_bottom_icon2.png"/></div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                根据客户要求融合设计师的想法构建出了符合客户审美，需求的空间设计。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+
+    })()
+</script>
+</html>

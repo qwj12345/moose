@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+body{
+    background: #fff;
+}
+.products-top{
+    margin-top: 5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.products-top-item{
+    width: calc(50% - 1px);
+    background: #f6f6f6;
+    padding: 1.6rem;
+    display: flex;
+    margin-bottom: 3px;
+    position: relative;
+}
+.products-top-item>.product-img{
+    width: 48%;
+}
+.product-top-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 4rem 2rem;
+    width: 52%;
+}
+.product-top-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    letter-spacing: 1px;
+    
+}
+.product-top-desc{
+    font-size: 12px;
+    color: #333;
+    transform: scale(0.7) translate(-21%,0);
+    position: relative;
+}
+.product-top-tabs{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-tab{
+    padding: 3px 12px;
+    border: 1px solid rgba(000, 000, 000, 0.4);;
+    border-radius: 28px;
+    color: rgba(000, 000, 000, 0.4);
+    font-size: 1.2rem;
+    margin-right: 6px;
+}
+.product-top-bottom{
+    color: rgba(000, 000, 000, 0.4);
+    font-size: 12px;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+.products-bottom{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    margin-bottom: 3rem;
+}
+.products-bottom-item{
+    width: calc((100% / 3) - 2px);
+    padding: 0 7%;
+    background: #f6f6f6;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+.product-bottom-bottom{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    padding: 6%;
+    display: none;
+}
+.product-bottom-tabs{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-bottom-tab{
+    border: 1px solid rgba(000, 000, 000, 0.8);
+    border-radius: 28px;
+    color: rgba(000, 000, 000, 0.8);
+    font-size: 1.2rem;
+    margin-right: 4%;
+    padding: 1px 8px;
+    margin-top: 4%;
+}
+.new-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+}
+@media (max-width: 767px){
+    .products-top-item{
+        width: 92vw;
+        margin: 0 auto 4px;
+        padding: 10px 12px;
+
+    }
+    .products-bottom{
+        width: 92vw;
+        margin: 0 auto 20px;
+        flex-direction: row;
+    }
+    .products-bottom-item{
+        width: calc(50% - 2px);
+        margin-bottom: 4px;
+    }
+    .product-bottom-bottom{
+        display: block;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部  -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')" class="active">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- menu mobile -->
+                <div class="menu-mobile">
+                    <img src="./images/product_menu_mobile.png"/>
+                </div>
+                <!-- main -->
+                <div style="position: relative;">
+                    <div class="products-left">
+                        <div class="product-menu-cn">
+                            <a onclick="delayURL('./product_1.html')"  class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu1_active.jpg"/></div>
+                                <div class="product-menu_active">木门</div>
+                            </a>
+                            <a  onclick="delayURL('./product_2.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu2.jpg"/></div>
+                                <div>整木定制</div>
+                            </a>
+                            <a  onclick="delayURL('./product_commingsoon.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu3.jpg"/></div>
+                                <div>楼梯</div>
+                            </a>
+                            <a  onclick="delayURL('./product_4.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu4.jpg"/></div>
+                                <div>家具</div>
+                            </a>
+                            <a  onclick="delayURL('./product_commingsoon.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu5.jpg"/></div>
+                                <div>五金</div>
+                            </a>
+                            <a  onclick="delayURL('./product_commingsoon.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu6.jpg"/></div>
+                                <div>智能家具</div>
+                            </a>
+                        </div>
+                        <div class="product-menu-eng">
+                            <div class="product-eng-item product-menu_active">Wooden door series</div>
+                            <div class="product-eng-item">Whole wood</div>
+                            <div class="product-eng-item">Staircase series</div>
+                            <div class="product-eng-item">Home series</div>
+                            <div class="product-eng-item">Hardware</div>
+                            <div class="product-eng-item">intelligence</div>
+                        </div>
+                        <div class="product-left-modal"></div>
+                    </div>
+                    <div class="products-right">
+                        <!-- banner -->
+                        <div><img src="./images/product_banner.png"/></div>
+                        <!-- content -->
+                        <div class="products-top flex-block">
+                            <div class="products-top-item">
+                                <div class="product-img"><img src="./images/product_1/product_1.png"/></div>
+                                <div class="product-top-content">
+                                    <div>
+                                        <div class="product-top-title">
+                                            法式系列MSF-01
+                                        </div>
+                                        <div class="product-top-desc">WOODEN DOOR</div>
+                                    </div>
+                                    <div>
+                                        <div class="product-top-tabs">
+                                            <div class="product-tab">橡木材质</div>
+                                            <div class="product-tab">简约风格</div>
+                                            <div class="product-tab">胶粘工艺</div>
+                                        </div>
+                                        <div class="product-top-bottom">采用高级国际进口橡木，前期材料处理17个步骤，此款门型具有******等特点。</div>
+                                    </div>
+                                </div>
+                                <div class="new-icon"><img src="./images/new_product_icon.png"/></div>
+                            </div>
+                            <div class="products-top-item">
+                                <div class="product-img"><img src="./images/product_1/product_2.png"/></div>
+                                <div class="product-top-content">
+                                    <div>
+                                        <div class="product-top-title">
+                                            法式系列MSF-01
+                                        </div>
+                                        <div class="product-top-desc">WOODEN DOOR</div>
+                                    </div>
+                                    <div>
+                                        <div class="product-top-tabs">
+                                            <div class="product-tab">橡木材质</div>
+                                            <div class="product-tab">简约风格</div>
+                                            <div class="product-tab">胶粘工艺</div>
+                                        </div>
+                                        <div class="product-top-bottom">采用高级国际进口橡木，前期材料处理17个步骤，此款门型具有******等特点。</div>
+                                    </div>
+                                </div>
+                                <div class="new-icon"><img src="./images/new_product_icon.png"/></div>
+                            </div>
+                            <div class="products-top-item">
+                                <div class="product-img"><img src="./images/product_1/product_1.png"/></div>
+                                <div class="product-top-content">
+                                    <div>
+                                        <div class="product-top-title">
+                                            法式系列MSF-01
+                                        </div>
+                                        <div class="product-top-desc">WOODEN DOOR</div>
+                                    </div>
+                                    <div>
+                                        <div class="product-top-tabs">
+                                            <div class="product-tab">橡木材质</div>
+                                            <div class="product-tab">简约风格</div>
+                                            <div class="product-tab">胶粘工艺</div>
+                                        </div>
+                                        <div class="product-top-bottom">采用高级国际进口橡木，前期材料处理17个步骤，此款门型具有******等特点。</div>
+                                    </div>
+                                </div>
+                                <div class="new-icon"><img src="./images/new_product_icon.png"/></div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="products-bottom flex-block">
+                            <div class="products-bottom-item">
+                                <img src="./images/product_1/product_3.png"/>
+                                <div class="product-bottom-bottom">
+                                    <div class="product-top-title">轻奢门型MS-11</div>
+                                    <div class="product-top-desc">WOODEN DOOR</div>
+                                    <div class="product-bottom-tabs">
+                                        <div class="product-bottom-tab">橡木材质</div>
+                                        <div class="product-bottom-tab">简约风格</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-bottom-item">
+                                <img src="./images/product_1/product_4.png"/>
+                                <div class="product-bottom-bottom">
+                                    <div class="product-top-title">轻奢门型MS-11</div>
+                                    <div class="product-top-desc">WOODEN DOOR</div>
+                                    <div class="product-bottom-tabs">
+                                        <div class="product-bottom-tab">橡木材质</div>
+                                        <div class="product-bottom-tab">简约风格</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-bottom-item">
+                                <img src="./images/product_1/product_3.png"/>
+                                <div class="product-bottom-bottom">
+                                    <div class="product-top-title">轻奢门型MS-11</div>
+                                    <div class="product-top-desc">WOODEN DOOR</div>
+                                    <div class="product-bottom-tabs">
+                                        <div class="product-bottom-tab">橡木材质</div>
+                                        <div class="product-bottom-tab">简约风格</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-bottom-item">
+                                <img src="./images/product_1/product_4.png"/>
+                                <div class="product-bottom-bottom">
+                                    <div class="product-top-title">轻奢门型MS-11</div>
+                                    <div class="product-top-desc">WOODEN DOOR</div>
+                                    <div class="product-bottom-tabs">
+                                        <div class="product-bottom-tab">橡木材质</div>
+                                        <div class="product-bottom-tab">简约风格</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-bottom-item">
+                                <img src="./images/product_1/product_3.png"/>
+                                <div class="product-bottom-bottom">
+                                    <div class="product-top-title">轻奢门型MS-11</div>
+                                    <div class="product-top-desc">WOODEN DOOR</div>
+                                    <div class="product-bottom-tabs">
+                                        <div class="product-bottom-tab">橡木材质</div>
+                                        <div class="product-bottom-tab">简约风格</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="footer flex-block">
+                    <div>
+                        <div class="footer-item-title">MOSEE</div>
+                        <div class="footer-item-desc">
+                            <div>我们</div>
+                            <div>历程</div>
+                            <div>荣誉</div>
+                            <div>墨瑟影像</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Service</div>
+                        <div class="footer-item-desc">
+                            <div>木门系列</div>
+                            <div>柜体</div>
+                            <div>护墙</div>
+                            <div>楼梯</div>
+                            <div>配件</div>
+                            <div>全屋定制</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Find us</div>
+                        <div class="footer-item-desc">
+                            <div>北京</div>
+                            <div>上海</div>
+                            <div>天津</div>
+                            <div>深圳</div>
+                            <div>更多</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Media</div>
+                        <div class="footer-item-desc">
+                            <div>新品</div>
+                            <div>技术迭代</div>
+                            <div>行业动态</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Space</div>
+                        <div class="footer-item-desc">
+                            <div>理念</div>
+                            <div>搭配</div>
+                            <div>维护</div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-icons">
+                            <div><img src="./images/wx.png"/></div>
+                            <div><img src="./images/dy.png"/></div>
+                            <div><img src="./images/wb.png"/></div>
+                        </div>
+                        <div class="footer-location">
+                            <div class="location-icon"><img src="./images/location.png"/></div>
+                            <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        </div>
+                        <div class="footer-phone">
+                            400 686 7818
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom -->
+                <div class="footer-bottom flex-block">
+                    <div class="footer-logo"><img src="./images/logo_name.png"/></div>
+                    <div>Copyright@2017-2020墨瑟世家（北京）有限公司 版权所有 京ICP备09061279号-1</div>
+                </div>
+               
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        // 弹出信息
+        $('.products-bottom-item').hover(function(){
+            $(this).find('.product-bottom-bottom').slideToggle();
+        },function(){
+            $(this).find('.product-bottom-bottom').slideToggle();
+        })
+        // 为了在下部产品排版为5的倍数时不会乱
+        window.onload = function(){
+            if($('.products-bottom-item').length){
+                $('.products-bottom').append(`<div class="products-bottom-item"></div>`)
+            }
+        }
+    })()
+</script>
+</html>

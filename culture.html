@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/swiper.min.css">
+</head>
+<style>
+@import url('./css/common.css');
+.about-us{
+    padding: 6vw 13% 7vw;
+}
+.about-title{
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.about-us>div:last-child{
+    line-height: 2rem;
+}
+.describe{
+    position: relative;
+    margin-bottom: 15rem;
+}
+.describe>div{
+    position: absolute;
+    cursor: pointer;
+}
+.describe-item1{
+    width: 42vw;
+    background: #fff;
+    top: 6%;
+    left: 9%;
+}
+.describe-item1>div{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translate(0,-52%);
+    max-width: 40%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.describe-item1>div>div{
+    color: #333;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+.describe-item1>div>div:first-child{
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+.describe-item2{
+    width: 33vw;
+    background: #fff;
+    bottom: 10%;
+    left: 15%;
+}
+.describe-item2>div{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    color: #fff;
+}
+.describe-item2>div>div{
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+.describe-item2>div>div:first-child{
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+.describe-item3,.describe-item2{
+    transition: all .5s linear;
+}
+.describe-item3:hover,.describe-item2:hover{
+    transform: scale(1.1);
+}
+.describe-item3{
+    width: 41vw;
+    background: #fff;
+    bottom: -10%;
+    right: 18%;
+    z-index: 2;
+}
+.describe-item3>div{
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translate(0,-52%);
+}
+.describe-item3>div>div{
+    color: rgba(000, 000, 000, 0.7);
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.describe-item4{
+    width: 36vw;
+    top: -8%;
+    right: 7%;
+    
+}
+.describe-item4:hover .bottom{
+    background: rgba(54,55,66,1);
+}
+.describe-item4 .top{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-left: 18%;
+    height: 16vw;
+    justify-content: center;
+    overflow: hidden;
+}
+.describe-item4 .bottom{
+    background: rgba(54,55,66,0.8);
+    display: flex;
+    flex-direction: column;
+    padding-left: 18%;
+    height: 16vw;
+    justify-content: center;
+    transition: all .5s linear;
+}
+.describe-item4 .bottom>div{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+.describe-item4 .bottom>div:first-child{
+    font-size: 1.6rem;
+}
+.describe-item4 .top>div{
+    color: #77626a;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+.describe-item4 .top>div:first-child{
+    color: #77626a;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+}
+.culture-swiper{
+    background: #fff;
+    padding: 8rem 0 18rem;
+}
+.swiper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+.swiper-container {
+    overflow: visible !important;
+    text-align: center;
+}
+.swiper-slide{
+    padding: 0 4%;
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    position: relative;
+    pointer-events:none;
+}
+.swiper-item{
+    border-radius: 1.2rem;
+}
+.swiper-slide-active {
+    top: 0;
+    opacity: 1;
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.swiper-slide-active{
+    z-index: 10!important;
+}
+.swiper-slide-next::after,.swiper-slide-prev::after{
+    pointer-events: auto;
+    content: "";
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 0;
+    bottom: 0;
+    background: rgba(000, 000, 000, 0.4);
+    border-radius: 1.2rem;
+}
+.swiper-text{
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    padding: 2rem 0;
+    transform: translate(0,100%);
+    display: none;
+}
+.swiper-text>div:first-child{
+    text-align: left;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.swiper-text>div:last-child{
+    text-align: left;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #666;
+    line-height: 2rem;
+    margin-top: 0.8rem;
+}
+.swiper-slide-active .swiper-text{
+    display: block;
+}
+.trends{
+    margin-top: 3rem;
+    background: #080e28;
+    padding: 6vw;
+    display: flex;
+}
+.trends-left{
+    width: 43%;
+    padding-top: 5vw;
+}
+.trends-left>div:first-child{
+    color: #fff;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 2px;
+}
+.trends-left>div:last-child{
+    margin-top: 6rem;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1.6rem;
+    width: 9vw;
+    height: 2.8vw;
+    line-height: 2.8vw;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.trends-right{
+    width: 57%;
+    display: flex;
+    justify-content: space-between;
+}
+.trend-item{
+    width: 48%;
+    overflow: hidden;
+    position: relative;
+    height: 40vw;
+    cursor: pointer;
+}
+.trend-item-bottom{
+    padding: 1.5rem 1.5rem 0;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: all .5s linear;
+}
+.trend-item-bottom-header{
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #999;
+}
+.trend-item-desc{
+    display: none;
+    padding: 0rem 0 3rem;
+    color: #999;
+    font-size: 1.4rem;
+}
+@media (max-width: 767px){
+    .about-us{
+        padding: 8vw 5% 5vw;
+    }
+    .about-title{
+        font-size: 4rem;
+        margin-bottom: 1.6rem;
+    }
+    .describe{
+        margin-bottom: 3rem;
+    }
+    .describe>img{
+        display: none;
+    }
+    .describe-item1>div>div{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .describe-item1,.describe-item2,.describe-item3,.describe-item4{
+        position: relative !important;
+        margin: 2rem auto;
+        width: 100vw;
+        left: 0;
+    }
+    .describe-item4 .bottom,.describe-item4 .top{
+        height: 50vw;
+        padding-left: 7%;
+    }
+    .describe-item3>div{
+        left: 7%;
+    }
+    .culture-swiper {
+        padding: 3rem 0;
+    }
+    .swiper-slide{
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    .swiper-slide-active {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    .swiper-text{
+        display: none !important;
+    }
+    .trends{
+        flex-direction: column;
+        padding: 5vw;
+    }
+    .trends-right,.trends-left{
+        width: 100%;
+    }
+    .trend-item{
+        height: 85vw;
+    }
+    .trends-left>div:last-child{
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        width: 30vw;
+        height: 10vw;
+        line-height: 10vw;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')"  class="active">MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- banner -->
+                <div>
+                    <img src="./images/culture_banner.png"/>
+                </div>
+                <!-- about -->
+                <div class="about-us">
+                    <div class="about-title">About Us Mosee</div>
+                    <div style="color: #333;">
+                        北京墨瑟世家家居有限公司，坐落于历史文化名城之一的北京通州，公司是一家集设计、生产，销售，现场施工，安装，以及售后服务为一体的综合性企业。公司始终坚
+                        持以“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志
+                        成为行业首屈一指的专业化全屋定制公司。
+                    </div>
+                </div>
+                <!-- describe -->
+                <div class="describe">
+                    <img src="./images/culture_back.png"/>
+                    <div class="describe-item1">
+                        <img src="./images/culture_block2.png"/>
+                        <div>
+                            <div>注重细节</div>
+                            <div>把一件简单的事做好就是不简单</div>
+                            <div>把一件平凡的事做好就是不平凡</div>
+                        </div>
+                    </div>
+                    <div class="describe-item2">
+                        <img src="./images/culture_block1.png"/>
+                        <div>
+                            <div>科学制作</div>
+                            <div>墨瑟世家在制作过程中将整材进行切割，</div>
+                            <div>可将木材内部的纤维进行切断</div>
+                            <div>减少因木材内部应力而产生的干缩、湿胀现象。</div>
+                        </div>
+                    </div>
+                    <div class="describe-item3">
+                        <img src="./images/culture_block3.png"/>
+                        <div>
+                            <div>设计，艺术与自由</div>
+                        </div>
+                    </div>
+                    <div class="describe-item4">
+                        <div class="top">
+                            <div>天然取材</div>
+                            <div>墨瑟世家木作取材自世界各地生长较快成材较早<br/>轮伐期短的天然速生材。<br/>木材含水率10~12%，干燥，收缩性小不易发生开裂<br/>和变形，耐水，耐腐蚀。</div>
+                        </div>
+                        <div class="bottom">
+                            <div>Protray perfection</div>
+                            <div>描绘完美</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- swiper -->
+                <div class="culture-swiper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" >
+                                <img class="swiper-item" src="./images/culture_swiper.png">
+                                <div class="swiper-text">
+                                    <!--  -->
+                                    <div class="swiper-text-time">2017.5.3</div>
+                                    <div class="swiper-text-content">mosee墨瑟世家正式成立，秉承着“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志成为行业首屈一指的专业化全屋定制公司。</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-item" src="./images/culture_swiper.png">
+                                <div class="swiper-text">
+                                    <!--  -->
+                                    <div class="swiper-text-time">2017.5.3</div>
+                                    <div class="swiper-text-content">mosee墨瑟世家正式成立，秉承着“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志成为行业首屈一指的专业化全屋定制公司。</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <img class="swiper-item" src="./images/culture_swiper.png">
+                                <div class="swiper-text">
+                                    <!--  -->
+                                    <div class="swiper-text-time">2017.5.3</div>
+                                    <div class="swiper-text-content">mosee墨瑟世家正式成立，秉承着“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志成为行业首屈一指的专业化全屋定制公司。</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <img class="swiper-item" src="./images/culture_swiper.png">
+                                <div class="swiper-text">
+                                    <!--  -->
+                                    <div class="swiper-text-time">2017.5.3</div>
+                                    <div class="swiper-text-content">mosee墨瑟世家正式成立，秉承着“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志成为行业首屈一指的专业化全屋定制公司。</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="swiper-item" src="./images/culture_swiper.png">
+                                <div class="swiper-text">
+                                    <!--  -->
+                                    <div class="swiper-text-time">2017.5.3</div>
+                                    <div class="swiper-text-content">mosee墨瑟世家正式成立，秉承着“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志成为行业首屈一指的专业化全屋定制公司。</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- 动态 -->
+                <div class="trends">
+                    <div class="trends-left">
+                        <div>查看<br/>MOSEE动态</div>
+                        <div>浏览全部动态</div>
+                    </div>
+                    <div class="trends-right">
+                        <div class="trend-item">
+                            <div class="trend-item-img"><img src="./images/trend_block1.png"/></div>
+                            <div class="trend-item-bottom">
+                                <div class="trend-item-bottom-header">
+                                    2018.11.18<br/>
+                                    墨瑟世家深圳店正式开业
+                                </div>
+                                <div class="trend-item-desc">
+                                    这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend-item">
+                            <div class="trend-item-img"><img src="./images/trend_block2.png"/></div>
+                            <div class="trend-item-bottom">
+                                <div class="trend-item-bottom-header">
+                                    2018.11.18<br/>
+                                    墨瑟世家深圳店正式开业
+                                </div>
+                                <div class="trend-item-desc">
+                                    这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        var mySwiper = null;
+        setTimeout(function(){
+            mySwiper = new Swiper('.swiper-container',{
+                centeredSlides: true,
+                slidesPerView: 2,
+                initialSlide:2,
+                watchActiveIndex: true,
+                loop:true
+            });
+        }, 20);
+        // 轮播图左右切换事件
+        $(document).on('click','.swiper-slide-next',function(){
+            mySwiper.slideNext()
+        })
+        $(document).on('click','.swiper-slide-prev',function(){
+            mySwiper.slidePrev()
+        })
+        // 
+        $('.trend-item').hover(function(){
+            console.log(235)
+            $(this).find('.trend-item-desc').slideToggle();
+            $(this).find('.trend-item-bottom-header').css("color","#000000");
+        },function(){
+            $(this).find('.trend-item-desc').slideToggle();
+            $(this).find('.trend-item-bottom-header').css("color","#999999");
+        })
+    })()
+</script>
+</html>

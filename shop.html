@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+.map{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+.map-title{
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.mao-title-eng{
+    font-size: 2rem;
+    color: rgba(000, 000, 000, 0.2);
+}
+.map-img{
+    margin-top: 4rem;
+    width: 62vw;
+}
+.map-addresses{
+    margin-top: 3rem;
+    width: 76vw;
+    align-items: center;
+}
+.address-left{
+    width: 28%;
+    padding-right: 4%;
+    color: #666;
+}
+.address-left .phone{
+    display: flex;
+    align-items: center;
+}
+.address-left .phone>div:first-child{
+    width: 3.5rem;
+    margin-right: 1rem;
+}
+.address-left .phone>div:last-child{
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    color: #666;
+}
+.address-left .location{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+.address-left .location>div:first-child{
+    width: 3.5rem;
+    margin-right: 1.6rem;
+    margin-left: 0.6rem;
+}
+.address-left .location>div:last-child{
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #666;
+}
+.address-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 72%;
+}
+.address-item{
+    width: 20%;
+    border-left: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 5rem;
+    height: 5rem;
+    color: #666;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.address-item_active{
+    color: #2faf8d;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.more-address{
+    margin-top: 16px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    justify-content: center;
+    padding: 3px 0;
+    width: 100%;
+}
+.more-address img{
+    transform: rotate(90deg);
+    width: 18px;
+    height: 40px;
+    cursor: pointer;
+}
+.banner{
+    margin-top: 3rem;
+}
+.shop-footer{
+    width: 80vw;
+    margin: 2rem auto 5rem;
+    background: #fff;
+    padding: 3% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.shop-footer-left{
+    width: calc(100% - 130px);
+    padding-right: 15%;
+}
+.shop-footer-left>div:first-child{
+    font-size: 2.6rem;
+    color: #333;
+    letter-spacing: 1px;
+}
+.shop-footer-left>div:last-child{
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: #444;
+    line-height: 1.9rem;
+}
+.shop-footer-right{
+    background: #2faf8d;
+    color: #fff;
+    border-radius: 26px;
+    padding: 6px 0px;
+    font-size: 2rem;
+    width: 130px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+@media (max-width: 767px){
+    .map-img{
+        margin-top: 2rem;
+        width: 90vw;
+    }
+
+    .banner{
+        margin-top: 2rem;
+    }
+    .map-addresses{
+        width: 90vw;
+    }
+    .address-left,.address-right{
+        width: 100%;
+    }
+    .address-left .location>div:first-child{
+        width: 2.6rem;
+        margin-right: 1.6rem;
+        margin-left: 0.6rem;
+    }
+    .address-left{
+        margin-bottom: 20px;
+    }
+    .shop-footer{
+        width: 90vw;
+    }
+    .shop-footer-left{
+        padding: 0;
+    }
+    .shop-footer-left,.shop-footer-right{
+        width: 100%;
+    }
+    .shop-footer-right{
+        margin-top: 20px;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')"  class="active">门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- 地图 -->
+                <div class="map">
+                    <div class="map-title">墨瑟世家体验中心</div>
+                    <div class="mao-title-eng">Experience shop</div>
+                    <div class="map-img"><img src="./images/map.png"/></div>
+                    <div class="map-addresses flex-block">
+                        <div class="address-left">
+                            <div class="phone">
+                                <div><img src="./images/mobile.png"/></div>
+                                <div>400 686 7818</div>
+                            </div>
+                            <div class="location">
+                                <div><img src="./images/location.png"/></div>
+                                <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                            </div>
+                        </div>
+                        <div class="address-right">
+                            <div class="address-item address-item_active">北京</div>
+                            <div class="address-item">南京</div>
+                            <div class="address-item">天津</div>
+                            <div class="address-item">邯郸</div>
+                            <div class="address-item">福建</div>
+                            <div class="address-item">海南</div>
+                            <div class="address-item">香港</div>
+                            <div class="address-item">台湾</div>
+                            <div class="address-item">上海</div>
+                            <div class="address-item">杭州</div>
+                        </div>
+                    </div>
+                    <div class="more-address">
+                        <img src="./images/face-right.png"/>
+                    </div>
+                </div>
+                <!-- banner -->
+                <div class="banner">
+                    <img src="./images/shop_banner.png"/>
+                </div>
+                <!--  -->
+                <div class="shop-footer">
+                    <div class="shop-footer-left" onclick="delayURL('./culture.html')" >
+                        <div>墨瑟世家版图发展 / 了解墨瑟 / 加入墨瑟</div>
+                        <div>墨瑟世家自成立以来已有5省，14市加盟墨瑟，一直以来保持着良好的合作共赢的合作关系，自2020年始墨瑟世家制定发展新战略，制定了一系列加盟新政策让加盟更简单、高效、共赢，良性发展。</div>
+                    </div>
+                    <a onclick="delayURL('./join.html')"  class="shop-footer-right">了解加盟</a>
+                </div>
+                <!-- footer -->
+                <div class="footer flex-block">
+                    <div>
+                        <div class="footer-item-title">MOSEE</div>
+                        <div class="footer-item-desc">
+                            <div>我们</div>
+                            <div>历程</div>
+                            <div>荣誉</div>
+                            <div>墨瑟影像</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Service</div>
+                        <div class="footer-item-desc">
+                            <div>木门系列</div>
+                            <div>柜体</div>
+                            <div>护墙</div>
+                            <div>楼梯</div>
+                            <div>配件</div>
+                            <div>全屋定制</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Find us</div>
+                        <div class="footer-item-desc">
+                            <div>北京</div>
+                            <div>上海</div>
+                            <div>天津</div>
+                            <div>深圳</div>
+                            <div>更多</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Media</div>
+                        <div class="footer-item-desc">
+                            <div>新品</div>
+                            <div>技术迭代</div>
+                            <div>行业动态</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Space</div>
+                        <div class="footer-item-desc">
+                            <div>理念</div>
+                            <div>搭配</div>
+                            <div>维护</div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-icons">
+                            <div><img src="./images/wx.png"/></div>
+                            <div><img src="./images/dy.png"/></div>
+                            <div><img src="./images/wb.png"/></div>
+                        </div>
+                        <div class="footer-location">
+                            <div class="location-icon"><img src="./images/location.png"/></div>
+                            <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        </div>
+                        <div class="footer-phone">
+                            400 686 7818
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom -->
+                <div class="footer-bottom flex-block">  
+                    <div class="footer-logo"><img src="./images/logo_name.png"/></div>
+                    <div>Copyright@2017-2020墨瑟世家（北京）有限公司 版权所有 京ICP备09061279号-1</div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        $('.address-item').click(function(){
+            $(this).addClass('address-item_active');
+            $(this).siblings().removeClass('address-item_active');
+        })
+    })()
+</script>
+</html>

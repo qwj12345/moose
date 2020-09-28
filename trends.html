@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mosee</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/swiper.min.css">
+</head>
+<style>
+@import url('./css/common.css');
+body{
+    background: #fff;
+}
+.swiper-content{
+    display: flex;
+    padding: 5rem 5%;
+    background: #f6f6f6;
+}
+.swiper-content .banner{
+    width: 67%;
+}
+.swiper-content .swiper-content-right{
+    width: 33%;
+}
+.swiper-container{
+    height: 65%;
+    margin-top: 30%;
+    margin-left: 18%;
+}
+.swiper-slide{
+    position: relative;
+}
+.swiper-pagination-bullet-active{
+    width: 6px;
+    height: 6px;
+    background:#000;
+}
+.swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+}
+.swiper-title{
+    font-size: 3.4rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    position: relative;
+}
+.swiper-title::after{
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    width: 38%;
+    height: 2px;
+    background: rgba(000, 000, 000, 0.8);
+    left: 0;
+}
+.swiper-text{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    margin-top: 8rem;
+}
+.swiper-slide .btn{
+    width: 30%;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    bottom: 3%;
+}
+.trends{
+    padding: 5rem 12%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.trend-item{
+    width: 31%;
+    position: relative;
+    height: 39vw;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+.trend-item-bottom{
+    padding: 1.3rem 1.5rem 0;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: all .5s linear;
+}
+.trend-item-bottom-header{
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: #777;
+}
+.trend-item-desc{
+    display: none;
+    padding: 0rem 0 3rem;
+    color: #999;
+    font-size: 1.4rem;
+}
+@media (max-width: 767px){
+    .swiper-content{
+        flex-direction: column;
+    }
+    .swiper-content .banner,.swiper-content .swiper-content-right{
+        width: 100%;
+    }
+    .swiper-content .swiper-container{
+        margin: 0;
+        padding-bottom: 100px;
+        margin-top: 3rem;
+    }
+    .swiper-text{
+        margin-top: 4.5rem;
+    }
+    .swiper-slide .btn{
+        width: 32%;
+        bottom: -40%;
+    }
+    .trends{
+        padding: 3rem 5%;
+    }
+    .trend-item{
+        width: 100%;
+        height: 150vw;
+        margin-bottom: 2rem;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')"  class="active">动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li> 
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- banner -->
+                <div>
+                    <img src="./images/trend_banner.png"/>
+                </div>
+                <!-- swiper -->
+                <div class="swiper-content">
+                    <div class="banner"><img src="./images/trend_swiper.png"/></div>
+                    <!-- swiper -->
+                    <div class="swiper-content-right">
+                        <div class="swiper-container swiper-container-horizontal">
+                            <div class="swiper-wrapper" >
+                                <div class="swiper-slide" >
+                                    <div class="swiper-title">邯郸地区墨瑟世家<br/>正式开业！</div>
+                                    <div class="swiper-text">开业期间1000定金抵3000，1-5日所有订单9折<br/>（可保价）</div>
+                                    <div class="btn" onclick="delayURL('./trend_detail.html')"><img src="./images/swiper_btn.png"/></div>
+                                </div>
+                                <div class="swiper-slide" >
+                                    <div class="swiper-title">邯郸地区墨瑟世家<br/>正式开业！</div>
+                                    <div class="swiper-text">开业期间1000定金抵3000，1-5日所有订单9折<br/>（可保价）</div>
+                                    <div class="btn" onclick="delayURL('./trend_detail.html')"><img src="./images/swiper_btn.png"/></div>
+                                </div>
+                                <div class="swiper-slide" >
+                                    <div class="swiper-title">邯郸地区墨瑟世家<br/>正式开业！</div>
+                                    <div class="swiper-text">开业期间1000定金抵3000，1-5日所有订单9折<br/>（可保价）</div>
+                                    <div class="btn" onclick="delayURL('./trend_detail.html')"><img src="./images/swiper_btn.png"/></div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- list -->
+                <div class="trends flex-block">
+                    <a  onclick="delayURL('./trend_detail.html')"  class="trend-item">
+                        <img src="./images/trend_item.png"/>
+                        <div class="trend-item-bottom">
+                            <div class="trend-item-bottom-header">
+                                2018.11.18<br>
+                                墨瑟世家深圳店正式开业
+                            </div>
+                            <div class="trend-item-desc">
+                                这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                            </div>
+                        </div>
+                    </a>
+                    <a onclick="delayURL('./trend_detail.html')" class="trend-item">
+                        <img src="./images/trend_item.png"/>
+                        <div class="trend-item-bottom">
+                            <div class="trend-item-bottom-header">
+                                2018.11.18<br>
+                                墨瑟世家深圳店正式开业
+                            </div>
+                            <div class="trend-item-desc">
+                                这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                            </div>
+                        </div>
+                    </a>
+                    <a onclick="delayURL('./trend_detail.html')" class="trend-item">
+                        <img src="./images/trend_item.png"/>
+                        <div class="trend-item-bottom">
+                            <div class="trend-item-bottom-header">
+                                2018.11.18<br>
+                                墨瑟世家深圳店正式开业
+                            </div>
+                            <div class="trend-item-desc">
+                                这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                            </div>
+                        </div>
+                    </a>
+                    <a onclick="delayURL('./trend_detail.html')" class="trend-item">
+                        <img src="./images/trend_item.png"/>
+                        <div class="trend-item-bottom">
+                            <div class="trend-item-bottom-header">
+                                2018.11.18<br>
+                                墨瑟世家深圳店正式开业
+                            </div>
+                            <div class="trend-item-desc">
+                                这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                            </div>
+                        </div>
+                    </a>
+                    <a onclick="delayURL('./trend_detail.html')" class="trend-item">
+                        <img src="./images/trend_item.png"/>
+                        <div class="trend-item-bottom">
+                            <div class="trend-item-bottom-header">
+                                2018.11.18<br>
+                                墨瑟世家深圳店正式开业
+                            </div>
+                            <div class="trend-item-desc">
+                                这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                            </div>
+                        </div>
+                    </a>
+                    <a onclick="delayURL('./trend_detail.html')" class="trend-item">
+                        <img src="./images/trend_item.png"/>
+                        <div class="trend-item-bottom">
+                            <div class="trend-item-bottom-header">
+                                2018.11.18<br>
+                                墨瑟世家深圳店正式开业
+                            </div>
+                            <div class="trend-item-desc">
+                                这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。这是一大段简介，墨瑟世家买一送一有买有送欢迎各位顾客的光临，快来买吧，嘻嘻。
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="footer flex-block">
+                    <div>
+                        <div class="footer-item-title">MOSEE</div>
+                        <div class="footer-item-desc">
+                            <div>我们</div>
+                            <div>历程</div>
+                            <div>荣誉</div>
+                            <div>墨瑟影像</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Service</div>
+                        <div class="footer-item-desc">
+                            <div>木门系列</div>
+                            <div>柜体</div>
+                            <div>护墙</div>
+                            <div>楼梯</div>
+                            <div>配件</div>
+                            <div>全屋定制</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Find us</div>
+                        <div class="footer-item-desc">
+                            <div>北京</div>
+                            <div>上海</div>
+                            <div>天津</div>
+                            <div>深圳</div>
+                            <div>更多</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Media</div>
+                        <div class="footer-item-desc">
+                            <div>新品</div>
+                            <div>技术迭代</div>
+                            <div>行业动态</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Space</div>
+                        <div class="footer-item-desc">
+                            <div>理念</div>
+                            <div>搭配</div>
+                            <div>维护</div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-icons">
+                            <div><img src="./images/wx.png"/></div>
+                            <div><img src="./images/dy.png"/></div>
+                            <div><img src="./images/wb.png"/></div>
+                        </div>
+                        <div class="footer-location">
+                            <div class="location-icon"><img src="./images/location.png"/></div>
+                            <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        </div>
+                        <div class="footer-phone">
+                            400 686 7818
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom -->
+                <div class="footer-bottom flex-block">
+                    <div class="footer-logo"><img src="./images/logo_name.png"/></div>
+                    <div>Copyright@2017-2020墨瑟世家（北京）有限公司 版权所有 京ICP备09061279号-1</div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        // 初始化轮播图
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        // 
+        $('.trend-item').hover(function(){
+            $(this).find('.trend-item-desc').slideToggle();
+            $(this).find('.trend-item-bottom-header').css("color","#000000");
+        },function(){
+            $(this).find('.trend-item-desc').slideToggle();
+            $(this).find('.trend-item-bottom-header').css("color","#777777");
+        })
+    })()
+</script>
+</html>

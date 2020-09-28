@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+.cases-container{
+    width: 74%;
+    margin: 8rem auto 2rem;
+}
+.cases-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cases-header .left .title{
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+.cases-header .right{
+    width: 10rem;
+}
+.cases-header .title-eng{
+    font-size: 1.4rem;
+    color: #bbb;
+}
+.cases-header .location{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+.cases-header .location>div{
+    color: #333;
+}
+.cases-header .location-icon{
+    width: 2.2rem;
+    margin-right: 0.6rem;
+    margin-bottom: 2px;
+}
+.video{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+video{
+    width: 100%;
+}
+.case-img{
+    margin-bottom: 2rem;
+}
+.case-img2{
+    width: 50%;
+    margin: 2rem auto;
+}
+.row-imgs-title{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row-imgs-title .text>div:first-child{
+    font-size: 1.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.row-imgs-title .text>div:last-child{
+    font-size: 1.6rem;
+    color: #bbb;
+    margin-top: 0.2rem;
+}
+.row-imgs-title .icon{
+    width: 3rem;
+}
+.row-imgs-list{
+    display: flex;
+    justify-content: space-between
+}
+.row-imgs-item{
+    width: 21.5%;
+    margin-top: 3rem;
+}
+.row-imgs-item>div:first-child{
+    overflow: hidden;
+}
+.row-imgs-item img{
+    transition: all .5s linear;
+}
+.row-imgs-item:hover img{
+    transform: scale(1.08);
+}
+.row-imgs-item:hover{
+    font-weight: bold;
+}
+.row-imgs-item>div:last-child{
+    background: #fff;
+    padding: 1.2rem 1.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: all .5s linear;
+}
+@media (max-width: 767px){
+    .cases-container{
+        width: 90%;
+        margin: 3rem auto;
+    }
+    .cases-header .right{
+        display: none;
+    }
+    .case-img2{
+        width: 100%;
+    }
+    .row-imgs-list{
+        flex-wrap: wrap;
+    }
+    .row-imgs-item{
+        width: 48%;
+        margin-top: 2rem;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')"  class="active">案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- banner -->
+                <div>
+                    <img src="./images/cases_banner1.png"/>
+                </div>
+                <!-- content -->
+                <div class="cases-container">
+                    <div class="cases-header">
+                        <div class="left">
+                            <div class="title">极致简约轻奢风</div>
+                            <div class="title-eng">SIMPLE AND LUXURIOUS STYLE</div>
+                            <div class="location">
+                                <div class="location-icon"><img src="./images/location.png"/></div>
+                                <div>河北邯郸府瑞特小区</div>
+                            </div>
+                        </div>
+                        <div class="right"><img src="./images/all_view.png"/></div>
+                    </div>
+                    <!-- 视频 -->
+                    <div class="video">
+                        <video controls src="./video/video.mp4"></video>
+                    </div>
+                    <!-- 图片 -->
+                    <div class="case-img"><img src="./images/case_1.png"/></div>
+                    <div class="case-img"><img src="./images/case_2.png"/></div>
+                    <div class="case-img case-img2"><img src="./images/case_3.png"/></div>
+                    <div class="case-img"><img src="./images/case_4.png"/></div>
+                    <!-- 横向 -->
+                    <div class="row-imgs">
+                        <div class="row-imgs-title">
+                            <div class="text">
+                                <div>更多案例</div>
+                                <div>MORE CASES</div>
+                            </div>
+                            <div class="icon"><img src="./images/reload.png"/></div>
+                        </div>
+                        <div class="row-imgs-list">
+                            <div class="row-imgs-item">
+                                <div><img src="./images/more_case.png"/></div>
+                                <div>极致简约轻奢风</div>
+                            </div>
+                            <div class="row-imgs-item">
+                                <div><img src="./images/more_case.png"/></div>
+                                <div>极致简约轻奢风</div>
+                            </div>
+                            <div class="row-imgs-item">
+                                <div><img src="./images/more_case.png"/></div>
+                                <div>极致简约轻奢风</div>
+                            </div>
+                            <div class="row-imgs-item">
+                                <div><img src="./images/more_case.png"/></div>
+                                <div>极致简约轻奢风</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+
+    })()
+</script>
+</html>

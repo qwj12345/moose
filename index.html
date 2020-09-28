@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mosee</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/swiper.min.css">
+</head>
+<style>
+@import url('./css/common.css');
+body{
+    background: #fff;
+}
+.swiper-content{
+    display: flex;
+    margin-top: 5rem;
+}
+.swiper-content .banner{
+    width: 67%;
+}
+.swiper-content .swiper-content-right{
+    width: 33%;
+}
+.swiper-container{
+    height: 65%;
+    margin-top: 30%;
+    margin-left: 18%;
+}
+.swiper-slide{
+    position: relative;
+}
+.swiper-pagination-bullet-active{
+    width: 6px;
+    height: 6px;
+    background:#000;
+}
+.swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+}
+.swiper-title{
+    font-size: 3.8rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    position: relative;
+}
+.swiper-title::after{
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    width: 55%;
+    height: 2px;
+    background: rgba(000, 000, 000, 0.15);
+    left: 0;
+}
+.swiper-text{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    margin-top: 8rem;
+}
+.swiper-slide .btn{
+    width: 30%;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    bottom: 3%;
+}
+.series{
+    margin-top: 5rem;
+    display: flex;
+    position: relative;
+}
+.series-item{
+    width: calc(100% / 3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.series-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(000, 000, 000, 0.7);
+    z-index: 1;
+}
+.series-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+}
+.series-text .cn{
+    font-size: 1.8rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.series-text .eng{
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
+    color: #fff;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.more-block{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+.more-block .more-btn{
+    padding: 0.4rem 1.8rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2.6rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.home-block{
+    margin: 16rem auto 0;
+    width: 74%;
+}
+.home-block>.left{
+    width: 50%;
+    padding: 0% 6% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-block>.left>.logo{
+    width: 55%;
+}
+.home-block>.left>.text{
+    letter-spacing: 0.2rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: #333;
+    margin-top: 4rem;
+}
+.home-block>.right{
+    width: 50%;
+}
+.cut-line{
+    margin-top: 12rem;
+}
+.focus{
+    background: #F6F6F6;
+    padding: 10rem 17% 6rem;
+}
+.focus-title{
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.focus-desc{
+    font-size: 1.6rem;
+    color: #999;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 0.2rem;
+}
+.focus-imgs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13rem;
+}
+.focus-imgs>div{
+    width: 14%;
+    
+}
+.focus-imgs img{
+    box-shadow: 8px 8px 14px  #bbb;
+    transition: all .3s linear;
+}
+.focus-imgs img:hover{
+    transform: scale(1.08);
+}
+.focus-imgs .top{
+    padding-bottom: 5rem;
+}
+.focus-imgs .bottom{
+    padding-top: 5rem;
+}
+.home-block2{
+    width: 74%;
+    margin: 8rem auto;
+}
+.home-block2 .left{
+    width: 38%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.home-block2 .left .block-btn{
+    border: 1px solid #838693;
+    color: #838693;
+    font-size: 1.6rem;
+    padding: 0.8rem 1.2rem;
+    align-self: baseline;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.home-block2 .right{
+    width: 62%;
+}
+.home-block2 .left .text1{
+    color: #838693;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+.home-block2 .left .text2{
+    color: rgba(000, 000, 000, 1);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 3rem 0;
+    letter-spacing: 2px;
+    position: relative;
+}
+.home-block2 .left .text2::before{
+    content: "";
+    position: absolute;
+    top: -60%;
+    width: 45%;
+    height: 2px;
+    background: rgba(65, 38, 38, 0.06);
+    left: 0;
+}
+.home-block2 .left .text2::after{
+    content: "";
+    position: absolute;
+    bottom: -60%;
+    width: 45%;
+    height: 2px;
+    background: rgba(65, 38, 38, 0.08);
+    left: 0;
+}
+
+@media (max-width: 767px){
+    .swiper-content{
+        flex-direction: column;
+    }
+    .swiper-content .banner,.swiper-content .swiper-content-right{
+        width: 100%;
+    }
+    .swiper-content .swiper-container{
+        margin: 0;
+        padding-bottom: 100px;
+        margin-top: 3rem;
+    }
+    .swiper-text{
+        margin-top: 4.5rem;
+    }
+    .swiper-slide .btn{
+        width: 32%;
+        bottom: -40%;
+    }
+    .series-text .eng{
+        font-size: 1.2rem;
+    }
+    .home-block{
+        width: 90%;
+        margin-top: 5rem;
+    }
+    .home-block>.left{
+        width: 100%;
+        padding: 0;
+    }
+    .home-block>.left>.logo{
+        width: 70%;
+    }
+    .home-block>.left>.text{
+        letter-spacing: 0.1rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-top: 2rem;
+    }
+    .home-block>.right{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .home-block2{
+        width: 90%;
+        margin-top: 5rem;
+    }
+    .home-block2>.left{
+        width: 100%;
+        padding: 0;
+    }
+
+    .home-block2>.right{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .home-block2 .left .block-btn{
+        font-size: 1.4rem;
+        padding: 0.6rem 1rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .home-block2 .left .text2{
+        margin: 2rem auto;
+    }
+    .cut-line{
+        margin-top: 2rem;
+    }
+    .focus{
+        padding: 5rem 5% 3rem;
+    }
+    .focus-imgs{
+        margin-top: 5rem;
+    }
+
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a onclick="delayURL('./index.html')" class="active">首页</a></li>
+                                        <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                        <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                        <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                        <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                        <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                        <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                    </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- banner -->
+                <div>
+                    <img src="./images/home_banner.png"/>
+                </div>
+                <!-- swiper -->
+                <div class="container swiper-content">
+                    <div class="banner"><img src="./images/home_swiper_banner.png"/></div>
+                    <!-- swiper -->
+                    <div class="swiper-content-right">
+                        <div class="swiper-container swiper-container-horizontal">
+                            <div class="swiper-wrapper" >
+                                <div class="swiper-slide" >
+                                    <div class="swiper-title">极致简约轻奢风</div>
+                                    <div class="swiper-text">Mosee最新设计<br/>舒适高挑别墅，把空间运用到了极致，80%都属于环保材料</div>
+                                    <div class="btn"><img src="./images/swiper_btn.png"/></div>
+                                </div>
+                                <div class="swiper-slide" >
+                                    <div class="swiper-title">极致简约轻奢风</div>
+                                    <div class="swiper-text">Mosee最新设计<br/>舒适高挑别墅，把空间运用到了极致，80%都属于环保材料</div>
+                                    <div class="btn"><img src="./images/swiper_btn.png"/></div>
+                                </div>
+                                <div class="swiper-slide" >
+                                    <div class="swiper-title">极致简约轻奢风</div>
+                                    <div class="swiper-text">Mosee最新设计<br/>舒适高挑别墅，把空间运用到了极致，80%都属于环保材料</div>
+                                    <div class="btn"><img src="./images/swiper_btn.png"/></div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 系列 -->
+                <div class="series">
+                    <div onclick="delayURL('./product_1.html')" class="series-item">
+                        <img src="./images/series_1.png"/>
+                        <div class="series-text">
+                            <div class="cn">木门系列</div>
+                            <div class="eng">CUSTOMIZED</div>
+                        </div>
+                    </div>
+                    <div onclick="delayURL('./product_commingsoon.html')" class="series-item">
+                        <img src="./images/series_2.png"/>
+                        <div class="series-text">
+                            <div class="cn">楼梯系列</div>
+                            <div class="eng">STAIRCASE SERIES</div>
+                        </div>
+                    </div>
+                    <div onclick="delayURL('./product_2.html')" class="series-item">
+                        <img src="./images/series_3.png"/>
+                        <div class="series-text">
+                            <div class="cn">整木系列</div>
+                            <div class="eng">WHOLE WOOD</div>
+                        </div>
+                    </div>
+                    <!-- 更多系列 -->
+                    <div class="more-block">
+                        <div  onclick="delayURL('./product_1.html')" class="more-btn">更多系列</div>
+                    </div>
+                </div>
+                <!-- banner2 -->
+                <div>
+                    <video src="./video/home.mp4" loop autoplay="autoplay" muted ></video>
+                </div>
+                <!-- block -->
+                <div class="flex-block home-block">
+                    <div class="left">
+                        <div class="logo"><img src="./images/logo_we.png"/></div>
+                        <div class="text">北京墨瑟世家家居有限公司，坐落于历史文化名城之一的北京通州，公司是一家集设计、生产，销售，现场施工，安装，以及售后服务为一体的综合性企业。公司始终坚持以“努力完善自我，用心赢得尊重”为服务理念，以高新技术与品质服务打造企业品牌。我们有着专业的设计、销售团队和成熟的生产技术，以及优质的售后服务。立志成为行业首屈一指的专业化全屋定制公司。</div>
+                    </div>
+                    <div class="right"><img src="./images/home_block1.png"/></div>
+                </div>
+                <!--  -->
+                <div class="cut-line"><img src="./images/line_block.png"/></div>
+                <!-- focus&love -->
+                <div class="focus">
+                    <div class="focus-title">Focus and love</div>
+                    <div class="focus-desc">木屋&nbsp;&nbsp;/&nbsp;&nbsp;全屋&nbsp;&nbsp;/&nbsp;&nbsp;楼梯&nbsp;&nbsp;/&nbsp;&nbsp;家具&nbsp;&nbsp;/&nbsp;&nbsp;五金</div>
+                    <div class="focus-imgs">
+                        <div class="top"><img src="./images/focus_1.png"/></div>
+                        <div class="bottom"><img src="./images/focus_2.png"/></div>
+                        <div class="top"><img src="./images/focus_3.png"/></div>
+                        <div class="bottom"><img src="./images/focus_4.png"/></div>
+                        <div class="top"><img src="./images/focus_5.png"/></div>
+                    </div>
+                </div>
+                <!-- block2 -->
+                <div class="flex-block home-block2">
+                    <div class="left">
+                        <div>
+                            <div class="text1">公寓设计—极致的简美</div>
+                            <div class="text2">现代风格，理想中的设计！</div>
+                            <div class="text1">放松的理想场所，舒适的绿洲</div>
+                        </div>
+                        <a onclick="delayURL('./cases.html')" class="block-btn">查看更多案例</a>
+                    </div>
+                    <a onclick="delayURL('./caseDetail2.html')"  class="right"><img src="./images/home_block2.png"/></a>
+                </div>
+                <!-- footer banner -->
+                <div class="footer-banner">
+                   <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="footer flex-block">
+                    <div>
+                        <div class="footer-item-title">MOSEE</div>
+                        <div class="footer-item-desc">
+                            <div>我们</div>
+                            <div>历程</div>
+                            <div>荣誉</div>
+                            <div>墨瑟影像</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Service</div>
+                        <div class="footer-item-desc">
+                            <div>木门系列</div>
+                            <div>柜体</div>
+                            <div>护墙</div>
+                            <div>楼梯</div>
+                            <div>配件</div>
+                            <div>全屋定制</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Find us</div>
+                        <div class="footer-item-desc">
+                            <div>北京</div>
+                            <div>上海</div>
+                            <div>天津</div>
+                            <div>深圳</div>
+                            <div>更多</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Media</div>
+                        <div class="footer-item-desc">
+                            <div>新品</div>
+                            <div>技术迭代</div>
+                            <div>行业动态</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Space</div>
+                        <div class="footer-item-desc">
+                            <div>理念</div>
+                            <div>搭配</div>
+                            <div>维护</div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-icons">
+                            <div><img src="./images/wx.png"/></div>
+                            <div><img src="./images/dy.png"/></div>
+                            <div><img src="./images/wb.png"/></div>
+                        </div>
+                        <div class="footer-location">
+                            <div class="location-icon"><img src="./images/location.png"/></div>
+                            <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        </div>
+                        <div class="footer-phone">
+                            400 686 7818
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom -->
+                <div class="footer-bottom flex-block">
+                    <div class="footer-logo"><img src="./images/logo_name.png"/></div>
+                    <div>Copyright@2017-2020墨瑟世家（北京）有限公司 版权所有 京ICP备09061279号-1</div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script type="text/javascript" src="./js/swiper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        // 初始化轮播图
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        // 更多系列
+        $('.series').hover(function(){
+            $('.more-block').css("height","30%")
+        },function(){
+            $('.more-block').css("height","0%")
+        })
+    })()
+</script>
+</html>

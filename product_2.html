@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+body{
+    background: #fff;
+}
+.products-top{
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.top-large-img{
+    width: calc(50% - 1px);
+    position: relative;
+}
+.top-large-bottom{
+    background: rgba(000, 000, 000, 0.8);
+    color: #fff;
+    position: absolute;
+    left: 0.1vw;
+    right: 0.1vw;
+    bottom: 0;
+    padding: 3.5% 2.5%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    display: none;
+}
+.products-top-right{
+    width: calc(50% - 1px);
+    display: flex;
+    justify-content: space-between;
+}
+.top-right-item{
+    width: calc(50% - 1px);
+    align-self: baseline;
+}
+.white-modal-content{
+    position: relative;
+    cursor: pointer;
+}
+.white-modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.6);
+}
+.top-item-text{
+    position: absolute;
+    left: 6%;
+    bottom: 4%;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.products-bottom{
+    justify-content: space-between;
+}
+.products-bottom-left{
+    width: calc(58% - 1px);
+}
+.bottom-left-more{
+    background: #000;
+    padding: 7% 5%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin-top: 5%;
+}
+.products-bottom-right{
+    width: calc(43% - 1px);
+}
+@media (max-width: 767px){
+    .products-top{
+        margin: 3rem auto 2rem;
+        width: 92%;
+    }
+    .top-large-img,.products-top-right{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .products-bottom{
+        width: 92%;
+        margin: 0 auto;
+        flex-direction: column-reverse;
+    }
+    .products-bottom-right,.products-bottom-left{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')" class="active">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- menu mobile -->
+                <div class="menu-mobile">
+                    <img src="./images/product_menu_mobile.png"/>
+                </div>
+                <!-- main -->
+                <div style="position: relative;">
+                    <div class="products-left">
+                        <div class="product-menu-cn">
+                            <a onclick="delayURL('./product_1.html')"  class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu1.jpg"/></div>
+                                <div>木门</div>
+                            </a>
+                            <a  onclick="delayURL('./product_2.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu2_active.jpg"/></div>
+                                <div class="product-menu_active">整木定制</div>
+                            </a>
+                            <a  onclick="delayURL('./product_commingsoon.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu3.jpg"/></div>
+                                <div>楼梯</div>
+                            </a>
+                            <a  onclick="delayURL('./product_4.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu4.jpg"/></div>
+                                <div>家具</div>
+                            </a>
+                            <a  onclick="delayURL('./product_commingsoon.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu5.jpg"/></div>
+                                <div>五金</div>
+                            </a>
+                            <a  onclick="delayURL('./product_commingsoon.html')" class="product-cn-item">
+                                <div><img src="./images/product_menu/product_menu6.jpg"/></div>
+                                <div>智能家具</div>
+                            </a>
+                        </div>
+                        <div class="product-menu-eng">
+                            <div class="product-eng-item">Wooden door series</div>
+                            <div class="product-eng-item product-menu_active">Whole wood</div>
+                            <div class="product-eng-item">Staircase series</div>
+                            <div class="product-eng-item">Home series</div>
+                            <div class="product-eng-item">Hardware</div>
+                            <div class="product-eng-item">intelligence</div>
+                        </div>
+                        <div class="product-left-modal"></div>
+                    </div>
+                    <div class="products-right">
+                        <!-- banner -->
+                        <div><img src="./images/product_banner.png"/></div>
+                        <!-- top -->
+                        <div class="products-top flex-block">
+                            <div class="top-large-img">
+                                <img src="./images/product_2/product_1.png"/>
+                                <div class="top-large-bottom">
+                                    极简系列Minimalism 
+                                </div>
+                            </div>
+                            <div class="products-top-right">
+                                <a  onclick="delayURL('./product_detail.html')"  class="top-right-item white-modal-content">
+                                    <img src="./images/product_2/product_2.png"/>
+                                    <div class="top-item-text">法式系列French series</div>
+                                    <div class="white-modal"></div>
+                                </a>
+                                <div class="top-right-item white-modal-content">
+                                    <img src="./images/product_2/product_3.png"/>
+                                    <div class="top-item-text">美式系列Light luxury</div>
+                                    <div class="white-modal"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- bottom -->
+                        <div class="products-bottom flex-block">
+                            <div class="products-bottom-left">
+                                <div class="white-modal-content">
+                                    <img src="./images/product_2/product_4.png"/>
+                                    <div class="top-item-text">新中式系列New Chinese style</div>
+                                    <div class="white-modal"></div>
+                                </div>
+                                <div class="bottom-left-more">
+                                    更多系列正在研发中...
+                                </div>
+                            </div>
+                            <div class="products-bottom-right white-modal-content">
+                                <img src="./images/product_2/product_5.png"/>
+                                <div class="top-item-text">轻奢系列Light luxury</div>
+                                <div class="white-modal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="footer flex-block">
+                    <div>
+                        <div class="footer-item-title">MOSEE</div>
+                        <div class="footer-item-desc">
+                            <div>我们</div>
+                            <div>历程</div>
+                            <div>荣誉</div>
+                            <div>墨瑟影像</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Service</div>
+                        <div class="footer-item-desc">
+                            <div>木门系列</div>
+                            <div>柜体</div>
+                            <div>护墙</div>
+                            <div>楼梯</div>
+                            <div>配件</div>
+                            <div>全屋定制</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Find us</div>
+                        <div class="footer-item-desc">
+                            <div>北京</div>
+                            <div>上海</div>
+                            <div>天津</div>
+                            <div>深圳</div>
+                            <div>更多</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Media</div>
+                        <div class="footer-item-desc">
+                            <div>新品</div>
+                            <div>技术迭代</div>
+                            <div>行业动态</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Space</div>
+                        <div class="footer-item-desc">
+                            <div>理念</div>
+                            <div>搭配</div>
+                            <div>维护</div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-icons">
+                            <div><img src="./images/wx.png"/></div>
+                            <div><img src="./images/dy.png"/></div>
+                            <div><img src="./images/wb.png"/></div>
+                        </div>
+                        <div class="footer-location">
+                            <div class="location-icon"><img src="./images/location.png"/></div>
+                            <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        </div>
+                        <div class="footer-phone">
+                            400 686 7818
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom -->
+                <div class="footer-bottom flex-block">
+                    <div class="footer-logo"><img src="./images/logo_name.png"/></div>
+                    <div>Copyright@2017-2020墨瑟世家（北京）有限公司 版权所有 京ICP备09061279号-1</div>
+                </div>
+               
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        // 弹出信息
+        $('.top-large-img').hover(function(){
+            $(this).find('.top-large-bottom').slideToggle();
+        },function(){
+            $(this).find('.top-large-bottom').slideToggle();
+        })
+        // 白色遮罩层去掉
+        $('.white-modal-content').hover(function(){
+            $(this).find('.white-modal').fadeToggle(300);
+        })
+    })()
+</script>
+</html>

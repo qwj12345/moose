@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+.join-menu{
+    padding: 10% 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.join-menu-item{
+    font-size: 3.6rem;
+    margin-bottom: 6px;
+    color: rgba(000, 000, 000, 0.2);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.menu-item_active{
+    color: rgba(000, 000, 000, 1);
+    font-weight: bold;
+    position: relative;
+}
+.menu-item_active::before{
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 20px;
+    height: 3px;
+    background: #000;
+}
+.join-banner{
+    position: relative;
+}
+.banner-content{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translate(0,-83%);
+    padding-top: 3%;
+    color: #766df9;
+    font-size: 6.5rem;
+    /* font-weight: bold; */
+    line-height: 6.2rem;
+}
+.banner-content:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 2px;
+    background: rgba(000, 000, 000, 0.4);
+}
+.join-content{
+    background: #fff;
+    position: relative;
+    width: 70%;
+    padding: 3vw 8%;
+    margin: 0 auto;
+    transform: translate(0,-60%);
+    box-shadow: 0 0 8px 1px #ddd;
+}
+.join-content-title{
+    font-size: 2.4rem;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4vw;
+}
+#join_2,#join_3{
+    display: none;
+}
+.join_1-content{
+    justify-content: space-between ;
+    
+}
+.join-content-item{
+    width: 50%;
+    position: relative;
+    padding-right: 28px;
+    margin-left: 28px;
+}
+.join-content-item::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-28px,-50%);
+    width: 2px;
+    height: 80%;
+    background: #efefef;
+}
+.join_1-title{
+    color: #666;
+    font-size: 2rem;
+}
+.join_1-title span{
+    font-weight: bold;
+    font-size: 2rem;
+    color: #000;
+
+}
+.join_1-desc{
+    color: #bbb;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.join_1-phone-title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+.join_1-phone{
+    color: #555;
+    font-size: 2rem;
+    margin-top: 2px;
+}
+.hide-block{
+    height: 15vw;
+}
+.join2-item{
+    display: flex;
+    position: relative;
+    width: 40%;
+    margin-bottom: 4rem;
+}
+.join2-item::after{
+    content: "";
+    height: 1px;
+    position: absolute;
+    background: #333;
+    width: 108%;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.join2-item>div{
+    font-size: 1.3rem;
+    margin-right: 8px;
+    color: #333;
+}
+input{
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    color: #333;
+}
+#join_1{
+        padding-bottom: 5vw;
+    }
+.zan{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 25%;
+    transform: translate(0,-50%);
+    display: none;
+}
+.fj{
+    position: absolute;
+    bottom: 0;
+    right: 17%;
+    width: 6%;
+    width: 7.5%;
+    transform: translate(0,40%);
+    display: none;
+    }
+    .join_3-phone{
+        font-size: 3.6rem;
+        color: #333;
+    }
+    .join_3-address{
+        font-size: 1.4rem;
+        color: #333;
+    }
+    .join_3-icons{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin-top: 3vw;
+    }
+    .join_3-icons>div{
+        width: 30%;
+        position: relative;
+    }
+    .join_3-icon1::after{
+        width: 100%;
+        content: "公众号";
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 1.2rem;
+        color: #bfbfbf;
+        text-align: center;
+    }
+    .join_3-icon2::after{
+        content: "墨瑟微信";
+        width: 100%;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 1.2rem;
+        color: #bfbfbf;
+        text-align: center;
+    }
+    .footer-banner{
+        margin-top: -10vw;
+    }
+@media (max-width: 767px){
+    .join-menu{
+        padding: 100px 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .join-banner{
+        padding-top: 50px;
+    }
+    .banner-content{
+        font-size: 3rem;
+        line-height: 3rem;
+        left: 5%;
+        transform: translate(0,0);
+    }
+    #join_3{
+        padding-bottom: 8vw;
+    }
+    .join-content{
+        padding: 5%;
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
+        transform: translate(0,-10%);
+    }
+
+    .join-content-item{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+    .join-content-item::before{
+        display: none;
+    }
+    .join_1-phone-title{
+        margin-top: 20px;
+    }
+    .join2-item{
+        width: 100%;
+    }
+    .hide-block{
+        height: 45vw;
+    }
+    .zan{
+        top: 0;
+        transform: translate(0,0);
+    }
+    .fj{
+        width: 12%;
+    }
+    .join_3-icons{
+        width: 100%;
+        margin-top: 5vw;
+    }
+    .join_3-icons>div{
+        width: 28%;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')" >动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')"  class="active">加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <div class="join-menu">
+                    <div>
+                        <div class="join-menu-item menu-item_active">加入团队</div>
+                        <div class="join-menu-item">加盟Mosee</div>
+                        <div class="join-menu-item">联系Mosee</div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="join-banner">
+                    <img src="./images/join_banner.png"/>
+                    <div class="banner-content">
+                        Talk to me <br/>about something
+                    </div>
+                </div>
+                <div class="join-content">
+                    <div id="join_1">
+                        <div class="join-content-title">
+                            加入团队
+                        </div>
+                        <div class="join_1-content flex-block">
+                            <div class="join-content-item">
+                                <div class="join_1-title">
+                                    <span>店面设计师</span>&nbsp;·&nbsp;北京总部
+                                </div>
+                                <div class="join_1-desc">要求：美术院校毕业25-40岁之间 正经人 墨瑟世家 北京通州区皇木场村商业街</div>
+                                <div class="join_1-phone-title">联系方式：</div>
+                                <div class="join_1-phone">1730983470@qq.com</div>
+                            </div>
+                            <div class="join-content-item">
+                                <div class="join_1-title">
+                                    <span>店面设计师</span>&nbsp;·&nbsp;北京总部
+                                </div>
+                                <div class="join_1-desc">要求：美术院校毕业25-40岁之间 正经人 墨瑟世家 北京通州区皇木场村商业街</div>
+                                <div class="join_1-phone-title">联系方式：</div>
+                                <div class="join_1-phone">1730983470@qq.com</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--  -->
+                    <div id="join_2">
+                        <div class="join-content-title">
+                            加盟MOSEE
+                        </div>
+                        <div>
+                            <div class="join2-item">
+                                <div>名字</div>
+                                <input/>
+                            </div>
+                            <div class="join2-item">
+                                <div>电话</div>
+                                <input/>
+                            </div>
+                            <div class="join2-item">
+                                <div>微信</div>
+                                <input/>
+                            </div>
+                            <div class="join2-item">
+                                <div>地区</div>
+                                <input/>
+                            </div>
+                            <div class="join2-item">
+                                <div>备注</div>
+                                <input/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div id="join_3">
+                        <div class="join-content-title">
+                            联系MOSEE
+                        </div>
+                        <div class="join_3-phone">400 686 7818</div>
+                        <div class="join_3-address">北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        <div class="join_3-icons">
+                            <div class="join_3-icon1">
+                                <img src="./images/code.png"/>
+                            </div>
+                            <div class="join_3-icon2">
+                                <img src="./images/code.png"/>
+                            </div>
+                            <div class="join_3-icon3">
+                                <img src="./images/concat.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 赞 -->
+                    <div class="zan"><img src="./images/join_zan.png"/></div>
+                    <!-- 飞机 -->
+                    <div class="fj"><img src="./images/footer_banner_icon.png"/></div>
+                </div>
+                <!-- <div class="hide-block"></div>  -->
+                <!-- footer banner -->
+                <div class="footer-banner">
+                     <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+        $('.join-menu-item').click(function(){
+            $(this).addClass('menu-item_active');
+            $(this).siblings().removeClass('menu-item_active');
+            if($(this).index()===0){
+                $('#join_2').hide(300);
+                $('#join_3').hide(300);
+                $('#join_1').show(300);
+                $('.zan').hide(300);
+                $('.fj').hide(300);
+            }else if($(this).index()===1){
+                $('#join_3').hide(300);
+                $('#join_1').hide(300);
+                $('#join_2').show(300);
+                $('.zan').show(300);
+                $('.fj').show(300);
+            }else{
+                $('#join_2').hide(300);
+                $('#join_1').hide(300);
+                $('#join_3').show(300);
+                $('.zan').show(300);
+                $('.fj').hide(300);
+            }
+        })
+    })()
+</script>
+</html>

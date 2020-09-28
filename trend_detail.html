@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mosee</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+@import url('./css/common.css');
+.detail-content{
+    background: #fff;
+    padding: 5% 14% 3%;
+}
+.detail-title{
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.detail-title-eng{
+    color: rgba(000, 000, 000, 0.4);
+    font-size: 1.4rem;
+}
+.detail-text{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: rgba(000, 000, 000, 0.4);
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+.detail-imgs{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detail-imgs>div{
+    margin-bottom: 2rem;
+}
+.img1{
+    width: 82%;
+}
+.img2{
+    width: 42%;
+}
+.img3{
+    width: 20%;
+    margin-bottom: 1rem !important;
+}
+.detail-imgs-text{
+    color: rgba(000, 000, 000, 0.4);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+@media (max-width: 767px){
+    .detail-content{
+        background: #fff;
+        padding: 20px 5% 16px;
+    }
+    .detail-title{
+        font-size: 3.6rem;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .img1{
+        width: 90%;
+    }
+    .img2{
+        width: 90%;
+    }
+    .img3{
+        width: 60%;
+    }
+}
+</style>
+<body>
+    <div class="scroll_main">
+		<div class="scroll_wrap">
+            <!-- 内容 -->
+			<div class="scroll_cont">
+                <!-- 头部 -->
+                <div class="header">
+                    <div class="container header-container">
+                        <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" onclick="delayURL('./index.html')">
+                                        <img alt="Brand" src="./images/logo.png">
+                                    </a>
+                                    </div>
+            
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a onclick="delayURL('./index.html')">首页</a></li>
+                                            <li><a onclick="delayURL('./product_1.html')">产品</a></li>
+                                            <li><a onclick="delayURL('./trends.html')"  class="active">动态</a></li>
+                                            <li><a onclick="delayURL('./culture.html')" >MOSEE文化</a></li>
+                                            <li><a onclick="delayURL('./shop.html')" >门店</a></li>
+                                            <li><a onclick="delayURL('./cases.html')" >案例</a></li>
+                                            <li><a onclick="delayURL('./join.html')" >加入MOSEE</a></li>
+                                        </ul>
+                                    
+                                    </div><!-- /.navbar-collapse -->
+                                </div><!-- /.container-fluid -->
+                            </nav>     
+                    </div>    
+                </div>
+                <!-- banner -->
+                <div>
+                    <img src="./images/trend_banner.png"/>
+                </div>
+                <!--  -->
+                <div class="detail-content">
+                    <div class="detail-title">墨瑟世家济南店正式开业</div>
+                    <div class="detail-title-eng">NEW STORE OPENS</div>
+                    <div class="detail-text"> 
+                        这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免费安装。这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免费安装。这是一大段简介，墨瑟世家深圳店开
+                        业开业活动是买一送一，全场8折免费安装。这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免费安装。这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免
+                        费安装。这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免费安装。<br/>
+                        <br/>
+                        这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免费安装。这是一大段简介，墨瑟世家深圳店开业开业活动是买一送一，全场8折免费安装。这是一大段简介，墨瑟世家深圳店开
+                        业开业活动是买一送一，全场8折免费安装。
+                        </div>
+                </div>
+                <div class="detail-imgs">
+                    <div class="img1"><img src="./images/trend_detail1.png"/></div>
+                    <div class="img2"><img src="./images/trend_detail2.png"/></div>
+                    <div class="img3"><img src="./images/trend_detail3.png"/></div>
+                    <div class="detail-imgs-text">扫码联系咨询/参加活动！！</div>
+                </div>
+                <!-- footer banner -->
+                <div class="footer-banner">
+                    <div class="footer-banner-content flex-block">
+                        <div ><img src="./images/footer_banner_text.png"/></div>
+                        <a onclick="delayURL('./join.html')"><img src="./images/footer_banner_icon.png"/></a>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="footer flex-block">
+                    <div>
+                        <div class="footer-item-title">MOSEE</div>
+                        <div class="footer-item-desc">
+                            <div>我们</div>
+                            <div>历程</div>
+                            <div>荣誉</div>
+                            <div>墨瑟影像</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Service</div>
+                        <div class="footer-item-desc">
+                            <div>木门系列</div>
+                            <div>柜体</div>
+                            <div>护墙</div>
+                            <div>楼梯</div>
+                            <div>配件</div>
+                            <div>全屋定制</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Find us</div>
+                        <div class="footer-item-desc">
+                            <div>北京</div>
+                            <div>上海</div>
+                            <div>天津</div>
+                            <div>深圳</div>
+                            <div>更多</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Media</div>
+                        <div class="footer-item-desc">
+                            <div>新品</div>
+                            <div>技术迭代</div>
+                            <div>行业动态</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-item-title">Space</div>
+                        <div class="footer-item-desc">
+                            <div>理念</div>
+                            <div>搭配</div>
+                            <div>维护</div>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-icons">
+                            <div><img src="./images/wx.png"/></div>
+                            <div><img src="./images/dy.png"/></div>
+                            <div><img src="./images/wb.png"/></div>
+                        </div>
+                        <div class="footer-location">
+                            <div class="location-icon"><img src="./images/location.png"/></div>
+                            <div>北京市通州区张家湾镇皇木厂村商业街东二区85-4</div>
+                        </div>
+                        <div class="footer-phone">
+                            400 686 7818
+                        </div>
+                    </div>
+                </div>
+                <!-- footer-bottom -->
+                <div class="footer-bottom flex-block">
+                    <div class="footer-logo"><img src="./images/logo_name.png"/></div>
+                    <div>Copyright@2017-2020墨瑟世家（北京）有限公司 版权所有 京ICP备09061279号-1</div>
+                </div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll_bar">
+				<div class="scroll_slider"></div>
+			</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/scrollBar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+    (function(){
+
+    })()
+</script>
+</html>
